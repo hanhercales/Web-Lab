@@ -1,8 +1,37 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>@ViewData["Title"] - Manage System</title>
+        <link href="~/css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <!-- Begin Top nav -->
+        <partial name = "TopNav" />
+        <!-- End Top nav -->
+        <div id="layoutSidenav">
+            <!-- Begin Left menu -->
+            <partial name = "LeftMenu"/>
+            <!-- End Left menu -->
+            <!-- Begin Right content -->
+            <div id="layoutSidenav_content">
+                <!-- Begin Main -->
+                <main>
+                    @RenderBody()
+                </main>
+                <!-- End Main -->
+                <!-- Begin Footer -->
+                <partial name = "Footer"/>
+                <!-- End Footer -->
+            </div>
+            <!-- End Right content -->
+        </div>
+        <script src="~/js/scripts.js"></script>   
+        @RenderSection("Scripts", required:false)
+    </body>
+</html>
