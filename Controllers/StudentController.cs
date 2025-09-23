@@ -34,14 +34,49 @@ public class StudentController  :Controller
             new SelectListItem { Text = "CE", Value = "3" },
             new SelectListItem { Text = "EE", Value = "4" }
         };
-        return View();;
+        return View();
     }
     
     [HttpPost]
     public IActionResult Create(Student student)
     {
-        student.Id = listStudents.Last<Student>().Id + 1;
-        listStudents.Add(student);
-        return View("Index", listStudents);
+        if(ModelState.IsValid)
+        {
+            student.Id = listStudents.Last<Student>().Id + 1;
+            listStudents.Add(student);
+            return View("Index", listStudents);
+        }
+
+        ViewBag.AllGenders = Enum.GetValues(typeof(Gender)).Cast<Gender>().ToList();
+        
+        ViewBag.AllBranches = new List<SelectListItem>()
+        {
+            new SelectListItem { Text = "IT", Value = "1" },
+            new SelectListItem { Text = "BE", Value = "2" },
+            new SelectListItem { Text = "CE", Value = "3" },
+            new SelectListItem { Text = "EE", Value = "4" }
+        };
+
+        return View();
+    }
+
+    public IActionResult Branches()
+    {
+        return View();
+    }
+    
+    public IActionResult Students()
+    {
+        return View();
+    }
+    
+    public IActionResult Subjects()
+    {
+        return View();
+    }
+    
+    public IActionResult Courses()
+    {
+        return View();
     }
 }

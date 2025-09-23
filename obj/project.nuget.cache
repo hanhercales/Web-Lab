@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "gXUossSjc714HZg2h7pRi5C3o/Vr1tnEEpzji4HnkCwhcQfAe63FCBRxiUCPGfKidKrT8oAqNXHJxLgKQAH7Og==",
+  "dgSpecHash": "ymukFGjmXyc=",
   "success": true,
   "projectFilePath": "D:\\Code\\C#\\WebApplication1\\WebApplication1.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\death\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.20\\microsoft.netcore.app.ref.8.0.20.nupkg.sha512",
+    "C:\\Users\\death\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.20\\microsoft.windowsdesktop.app.ref.8.0.20.nupkg.sha512",
+    "C:\\Users\\death\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.20\\microsoft.aspnetcore.app.ref.8.0.20.nupkg.sha512",
+    "C:\\Users\\death\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.20\\microsoft.netcore.app.host.win-x64.8.0.20.nupkg.sha512"
+  ],
   "logs": []
 }

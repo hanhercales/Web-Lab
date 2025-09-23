@@ -36,6 +36,26 @@ app.MapControllerRoute(
     defaults: new { controller = "Student", action = "Create" });
 
 app.MapControllerRoute(
+    name: "admin_branches_list",
+    pattern: "Admin/Branches/List",
+    defaults: new { controller = "Student", action = "Branches" });
+
+app.MapControllerRoute(
+    name: "admin_students_list",
+    pattern: "Admin/Students/List",
+    defaults: new { controller = "Student", action = "Students" });
+
+app.MapControllerRoute(
+    name: "admin_subjects_list",
+    pattern: "Admin/Subjects/List",
+    defaults: new { controller = "Student", action = "Subjects" });
+
+app.MapControllerRoute(
+    name: "admin_courses_list",
+    pattern: "Admin/Courses/List",
+    defaults: new { controller = "Student", action = "Courses" });
+
+app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
