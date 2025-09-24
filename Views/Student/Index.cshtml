@@ -24,9 +24,11 @@
             <th>Họ Tên</th>
             <th>Ngày Sinh</th>
             <th>Ngành</th>
+            <th>Giới Tính</th>
             <th>Hệ ĐT</th>
             <th>Địa Chỉ</th>
             <th>Email</th>
+            <th>Điểm</th>
         </tr>
     </thead>
     <tbody>
@@ -59,6 +61,7 @@
                 <td>@(s.IsRegular ? "Chính quy": "Phi chính quy")</td>
                 <td>@s.Address</td>
                 <td>@s.Email</td>
+                <td>@s.Score</td>
             </tr>
         }
     </tbody>
