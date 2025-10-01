@@ -1,10 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
-    </PropertyGroup>
+      <UserSecretsId>bff5c42d-5184-4d1a-a76b-fa42a97abe6d</UserSecretsId>
+  </PropertyGroup>
 
     <ItemGroup>
       <None Include="wwwroot\css\styles.css" />

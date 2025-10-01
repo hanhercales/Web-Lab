@@ -1276,19 +1276,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\demon\\.nuget\\packages\\": {}
+    "C:\\Users\\death\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project\\Code\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "D:\\Code\\C#\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "D:\\Project\\Code\\WebApplication1\\WebApplication1.csproj",
-      "packagesPath": "C:\\Users\\demon\\.nuget\\packages\\",
-      "outputPath": "D:\\Project\\Code\\WebApplication1\\obj\\",
+      "projectPath": "D:\\Code\\C#\\WebApplication1\\WebApplication1.csproj",
+      "packagesPath": "C:\\Users\\death\\.nuget\\packages\\",
+      "outputPath": "D:\\Code\\C#\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\demon\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\death\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -1311,7 +1311,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -1337,6 +1338,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.20, 8.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[8.0.20, 8.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.20, 8.0.20]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.20, 8.0.20]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -1345,7 +1364,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\demon\\.dotnet\\sdk\\8.0.413/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\death\\.dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

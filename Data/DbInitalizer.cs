@@ -7,9 +7,10 @@ public class DbInitalizer
 {
     public static void Initialize(IServiceProvider serviceProvider)
     {
-        using (var context = new SchoolContext(serviceProvider.GetRequiredService<DbContextOptions<SchoolContext>>()))
+        using (var context = new SchoolContext(serviceProvider
+                   .GetRequiredService<DbContextOptions<SchoolContext>>()))
         {
-            context.Database.EnsureCreated();
+            context.Database.Migrate();
             if (context.Majors.Any())
             {
                 return;
