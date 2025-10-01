@@ -1,11 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Data;
-using WebApplication1.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<SchoolContext>(options =>
-    options.UseOracle(builder.Configuration.GetConnectionString("SchoolContext")));
+var connectionString = builder.Configuration.GetConnectionString("SchoolContext");
+
+if (string.IsNullOrEmpty(connectionString))
+    throw new InvalidOperationException("Connection String not found");
+builder.Services.AddDbContext<SchoolContext>(options => options.UseOracle(connectionString));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
