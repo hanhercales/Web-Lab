@@ -4,13 +4,8 @@ using WebApplication1.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("SchoolContext");
-
-if (string.IsNullOrEmpty(connectionString))
-    throw new InvalidOperationException("Connection string not found");
-
 builder.Services.AddDbContext<SchoolContext>(options =>
-    options.UseOracle(connectionString));
+    options.UseOracle(builder.Configuration.GetConnectionString("SchoolContext")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
