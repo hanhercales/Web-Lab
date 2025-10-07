@@ -15,10 +15,19 @@ public class LearnerController : Controller
         db = context;
     }
     
-    public IActionResult Index()
+    public IActionResult Index(int ?mid)
     {
-        var learners = db.Learners.Include(m => m.Major).ToList();
-        return View(learners);
+        if (mid == null)
+        {
+            var learners = db.Learners.Include(m => m.Major).ToList();
+            return View(learners);
+        }
+        else
+        {
+            var learners = db.Learners.
+                Where(l => l.MajorID == mid).Include(m => m.Major).ToList();
+            return View(learners);
+        }
     }
     
     public IActionResult Create()
@@ -102,5 +111,13 @@ public class LearnerController : Controller
     private bool LearnerExists(int id)
     {
         return (db.Learners?.Any(e => e.LearnerID == id)).GetValueOrDefault();
+    }
+
+    public IActionResult LearnerByMajorID(int mid)
+    {
+        var learners = db.Learners
+            .Where(l => l.MajorID == mid).
+            Include(m => m.Major).ToList();
+        return PartialView("LearnerTable", learners);
     }
 }
